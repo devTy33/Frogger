@@ -1,0 +1,17 @@
+Justin Palumbo final project 2/13/23
+WEEK 1: 
+-created git hub repo and timelog/milestones
+-come up with idea with group (group is not in lab so do not have idea right now)
+-after coming up with idea for final lab, start coding planning of at least 5 hours of coding and planning this week
+-I think we want this project to be mostly in C and probably won't vary unless we decide to make a game
+-a possible game we might want to make is minesweeper and might have the capabilities to make it this semester possibly in the terminal
+
+Rubric
+  10 points: effort (have to put in 6 hours this week)
+  10 points: some sort of prototype/outline done for the project by time of submission
+  5 points: 1 data structure used
+  5 points: idea (most be worth doing and able to be done for final
+  10 points: meet with group at least 1 or 2 to have everything sorted out by the end of the week
+  
+  time log
+    2/13/23: research, gitHub repo, ideas, lab : 2 hours
