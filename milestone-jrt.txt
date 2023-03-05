@@ -1,0 +1,12 @@
+Riley Taylor:
+
+Rubric: 20 points - Time spent/effort put into the project
+	10 points - If code is working/compilable
+	5 points - Data structure/something in class we have covered
+	5 points - How well project fits the idea
+Time:
+	3 hours tutorials on 2d platformers.
+	2 hours messing with unity/familiarzing myself with unity and creating compilable task.
+	1 hour meeting with group and discussing the project.
+
+Github link: https://github.com/jpalumbo64/unity_final_project
