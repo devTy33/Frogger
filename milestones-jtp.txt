@@ -14,4 +14,6 @@ Rubric
   10 points: meet with group at least 1 or 2 to have everything sorted out by the end of the week
   
   time log
-    2/13/23: research, gitHub repo, ideas, lab : 2 hours
+    week of 2/13/23: research, gitHub repo, ideas, lab : 2 hours
+    week of 2/20/23: git hub torturials/ messing around with pre fab 2d game dynamics : 2.5 hours
+    3/5/2023: research using git hub with unity, setting up github app and unity app and then setting up repo with unity and github connected: 2.5 hours
