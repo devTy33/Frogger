@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
 
     private void NewGame()
     {
-        lives = 3;
         score = 0;
 
         LoadLevel(1);
@@ -33,7 +32,8 @@ public class GameManager : MonoBehaviour
             camera.cullingMask = 0;
         }
 
-        Invoke(nameof(LoadScene), 1f);
+        
+        LoadScene();
     }
 
     private void LoadScene()
@@ -52,21 +52,15 @@ public class GameManager : MonoBehaviour
             LoadLevel(nextLevel); */
         //}
          //else {
-            LoadLevel(1);
+            LoadLevel(level+1);
         //}
         
     }
 
     public void LevelFailed()
     {
-        lives--;
-
-       if (lives <= 0) {
-            NewGame();
-       } 
-       else {
-            LoadLevel(level);
-        } 
+        
+        LoadLevel(level);
     }
 
 }
