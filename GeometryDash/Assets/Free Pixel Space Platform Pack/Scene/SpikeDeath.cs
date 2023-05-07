@@ -5,23 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SpikeDeath : MonoBehaviour
 {
-    public int respawn;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
-            SceneManager.LoadScene(respawn);
+            other.gameObject.transform.position = new Vector3(-10,-1,0);
         }
     }
 }
