@@ -1,3 +1,7 @@
+//Controls players movement
+//animation
+//death
+//and colliders 
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -42,6 +46,9 @@ public class Player : MonoBehaviour
         SetDirection();
     }
 
+    //sees what player is hitting on ever Update
+    //if gorund then they can Jump
+    //if ladder then climb
     private void CheckCollision()
     {
         grounded = false;
@@ -59,10 +66,10 @@ public class Player : MonoBehaviour
 
             if (hit.layer == LayerMask.NameToLayer("Ground"))
             {
-                // Only set as grounded if the platform is below the player
+             
                 grounded = hit.transform.position.y < (transform.position.y - 0.5f);
 
-                // Turn off collision on platforms the player is not grounded to
+                
                 Physics2D.IgnoreCollision(overlaps[i], collider, !grounded);
             }
             else if (hit.layer == LayerMask.NameToLayer("Ladder"))
@@ -72,6 +79,8 @@ public class Player : MonoBehaviour
         }
     }
 
+    //controls character movement based on Input
+    //also points character in the direction they are moving.
     private void SetDirection()
     {
         if (climbing) {
@@ -100,7 +109,7 @@ public class Player : MonoBehaviour
     {
         rigidbody.MovePosition(rigidbody.position + direction * Time.fixedDeltaTime);
     }
-
+    //controls animation on what the character is doing
     private void AnimateSprite()
     {
         if (climbing)
@@ -118,7 +127,9 @@ public class Player : MonoBehaviour
             spriteRenderer.sprite = runSprites[spriteIndex];
         }
     }
-
+    //checks if collision cuased a win or loss/death
+    //win and loss calls game manager script
+    //game manager then restarts level or brings to level complete screen
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Objective"))
