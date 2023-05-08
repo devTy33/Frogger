@@ -1,3 +1,4 @@
+//spwans barrels in 2-4 second time period
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
