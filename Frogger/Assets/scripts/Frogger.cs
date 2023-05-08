@@ -95,10 +95,10 @@ public class Frogger : MonoBehaviour
         transform.rotation = Quaternion.identity;
         spriteRenderer.sprite = deadSprite;
         enabled = false;
-        
         FindObjectOfType<GameManager>().You_Died();
 
     }
+    
     public void Respawn(){
         StopAllCoroutines();
         transform.rotation = Quaternion.identity;
