@@ -1,3 +1,6 @@
+//I found this on a unity tutorial video on movement. I did not use all of it for my project however. 
+//The only things i really used from this script is the movement to the left and the jump command.
+//This made it very easy to set up what buttons I wanted for jumping and for the character to move.
 using UnityEngine;
 using UnityEngine.Events;
 
