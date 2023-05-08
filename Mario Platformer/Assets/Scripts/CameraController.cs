@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        //makes camera follow player
         transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
     }
 }

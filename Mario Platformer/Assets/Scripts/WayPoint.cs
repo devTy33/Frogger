@@ -10,6 +10,7 @@ public class WayPoint : MonoBehaviour
 
     private void Update()
     {
+        //allows objects to follow waypoints to make traps move
         if (Vector2.Distance(waypoints[currIndex].transform.position, transform.position) < .1f) {
             currIndex++;
             if (currIndex >= waypoints.Length) {

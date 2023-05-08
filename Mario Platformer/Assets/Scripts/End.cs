@@ -11,6 +11,7 @@ public class End : MonoBehaviour
 
     }
 
+    //if player touches flag, end the game.
     private void OnTriggerEnter2D(Collider2D collision) {
             if (collision.gameObject.name == "Player" && !levelComplete) {
                 levelComplete = true;

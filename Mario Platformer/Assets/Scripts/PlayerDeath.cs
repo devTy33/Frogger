@@ -15,17 +15,20 @@ public class PlayerDeath : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
+        //if player lands on trap, he dies
         if (collision.gameObject.CompareTag("Trap")) {
             Die();
         }
     }
 
     private void Die() {
+        //calls death animation
         rb.bodyType = RigidbodyType2D.Static;
         ani.SetTrigger("death");
     }
 
     private void RestartLevel() {
+        //spawns player at beginning of level
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

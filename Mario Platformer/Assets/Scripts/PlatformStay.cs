@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlatformStay : MonoBehaviour
 {
+    //makes player stay on platform automatically
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.name == "Player") {
             collision.gameObject.transform.SetParent(transform);

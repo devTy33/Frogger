@@ -44,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
         //running check
         MovementPos pos;
 
+        //rotates player depending on where he is moving
+        //also sets idle,jump and falling states
         if (xDir > 0f) {
             pos = MovementPos.running;
             sprite.flipX = false;
@@ -67,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private bool IsGrounded() {
+        //checks if player is on ground
        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpGround);
     }
 }
