@@ -1,4 +1,35 @@
 Justin Palumbo
+Justin Palumbo final project 2/13/23
+User Manual: to play the game copy and paste the URL and game will load and you can play the game from there. No special libaries are needed
+all you need to do is load up game and play.
+https://github.com/jpalumbo64/unity_final_project
+To see code and files you can go to each game indivual folder go to assets and scripts which were written in C#
+we used pre made sprites each and those can be found in game folders as well. 
+
+Donkey Kong: https://simmer.io/@jpalumb1/justin-kong :controls arrows left,right,up to climb and space to jump
+Frogger: https://simmer.io/@tander/frog-guy : contols arrow keys left,right, up and down.
+Mario 2D platform: https://simmer.io/@Unitydev23/mario-style-platformer :contols arrow keys left,right, and space to jump
+Geometry Dash: https://simmer.io/@grandalexbo/geometry-dash-alex-fowler
+
+isues: We ran into some isssues trying to get all of our games together in one unity project, since we all used
+different setting, scripts and other things we got many compiler errors and just to many things to debugg. if we did not have a time crunch
+we could of maybe built a simple website looking like an arcade with links to each game. Also some games have small bugs, right now geometry dash space bar does
+not work in online version, some game may have some small bugs but nothing we could find while plyaying. In Justin Kong some times game will load the main menus not centerd properly 
+
+  time log:
+    week of 2/13/23: research, gitHub repo, ideas, lab : 2 hours
+    week of 2/20/23: git hub torturials/ messing around with pre fab 2d game dynamics : 2.5 hours
+    3/5/2023: research using git hub with unity, setting up github app and unity app and then setting up repo with unity and github connected: 2.5 hours
+    week of 3/13/23: unity 2d tortials, just messed around in unity : 1 hour
+    week of 3/20/23: search for games made in unity : 30 mins
+    week of 3/27/23: no progress
+    week of 4/3/23: change game idea and watch beggining of tortial + made game bare bones 2.5 hours
+    week of 4/10/23: worked on game mechanics and making pre fabs for the game 5.5 hours
+    week of 4/17/23: worked debugging game, worked on presentation 3.5 hours
+    week of 4/24/23: fixed mechanics,scripts and made pre fabs(barrel and mario mechanics, interactions, death/win, changed level layout and added: 4.5 hours
+    week of 5/1/23: worked on UI, watched 2 hours of tortials for main menu and win game to interact with characters winning/death. spent time
+    building menu and buttons and to interact with character winning(touching princess) and character death(hitting a barrel). : 5 hours
+
 
 Meetings:
 Feb. 23rd (12:45 - 1:00): Just a short meeting deciding what to do. We all decided to make a Unity 2D "mario-style" game
