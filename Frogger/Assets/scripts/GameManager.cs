@@ -24,22 +24,22 @@ public class GameManager : MonoBehaviour
         homes = FindObjectsOfType<Home>();
         frogger = FindObjectOfType<Frogger>();
     }
-    private void Start(){
+    private void Start(){       //always start with 0 homes reach and calling a NewGame()
         num_homes = 0;
         NewGame();
     }
     private void NewGame(){
         num_homes  = 0;
         gameOverMenu.SetActive(false);
-        //SetScore(0);
-        SetLives(3);
+
+        SetLives(3);        //reset lives, time, and homes for each game
         NewLevel();
         total_time = 0;
     }
     private void End_Game(){
         frogger.gameObject.SetActive(false);            //turn of the frog
-        if(num_homes == 5){
-            winning_time.text = total_time.ToString();
+        if(num_homes == 5){                             //if we win we want to display the win screen and vise versa
+            winning_time.text = total_time.ToString();  //set txt object for UI
             winGameMenu.SetActive(true);
         }
         else{
@@ -47,10 +47,10 @@ public class GameManager : MonoBehaviour
         }
 
         StopAllCoroutines();
-        StartCoroutine(PlayAgain());
+        StartCoroutine(PlayAgain());                //if they lose see if they want to play again
 
     }
-    private IEnumerator PlayAgain(){
+    private IEnumerator PlayAgain(){                //Coroutine that keeps checking until the right key is pressed 
         bool play = false;
         while(!play){
             if(Input.GetKeyDown(KeyCode.Return)){
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
         NewGame();
     }
 
-    private void NewLevel(){
+    private void NewLevel(){                    //for a new level we want to reset the homes and respawn a new frog
         for(int i = 0; i < homes.Length; i++){
             homes[i].enabled = false;
         }
@@ -69,27 +69,25 @@ public class GameManager : MonoBehaviour
     }
 
    
-    private void Respawn(){
+    private void Respawn(){                 //uses the respawn function from Frogger file
         frogger.Respawn();
         StopAllCoroutines();
-        StartCoroutine(Timer(30));
+        StartCoroutine(Timer(30));          //restarts timer at top of screen
     }
     private IEnumerator Timer(int dur){
         time = dur;
         current_text.text = time.ToString();
-        while(time > 0){
+        while(time > 0){                      //timer counts down from 30
             yield return new WaitForSeconds(1);
             time--;
             current_text.text = time.ToString();
         }
-        //Display time 
-        //add to leaderboard if time is good
-        frogger.Death();
+        
+        frogger.Death();                    //If timer gets to zero then frogger dies
     }
 
     private void SetTime(int tii){
-        //this.score = score;
-        time_score.text = tii.ToString();
+        time_score.text = tii.ToString();   //set UI objects 
     }
     
     private void SetLives(int lives){
@@ -100,16 +98,16 @@ public class GameManager : MonoBehaviour
     public void HomeReached(){
         frogger.gameObject.SetActive(false);
         num_homes++;
-        total_time += (30 - time);
+        total_time += (30 - time);      //math to reveal the elapsed time which is the score
         SetTime(total_time);
-        if(num_homes == 5){
-            Invoke(nameof(End_Game), 1f);
+        if(num_homes == 5){             //game ends if all homes are filled
+            Invoke(nameof(End_Game), 1f);   
         }
         if(Cleared()){
             Invoke(nameof(NewLevel), 1f);
         }
         else{
-            Invoke(nameof(Respawn), 1f);
+            Invoke(nameof(Respawn), 1f);    //if there are homes left to fill, respawn
         }
     }
 
@@ -119,11 +117,11 @@ public class GameManager : MonoBehaviour
             Invoke(nameof(Respawn), 1f);
         }
         else{
-            Invoke(nameof(End_Game), 1f);
+            Invoke(nameof(End_Game), 1f);       //If you have no more lives left the you end the game
         }
     }
 
-    private bool Cleared(){
+    private bool Cleared(){     //checks to see if all homes have been reached
         for(int i = 0; i < homes.Length; i++){
             if(!homes[i].enabled){
                 return false;
