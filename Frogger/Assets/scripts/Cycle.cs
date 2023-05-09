@@ -12,7 +12,7 @@ public class Cycle : MonoBehaviour
     private Vector3 rightEdge;
     //Allows the platform objects to rotate to the other side of the screen once they go out of frame
     private void Start(){
-        leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);      
+        leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);          //set edges
         rightEdge = Camera.main.ViewportToWorldPoint(Vector3.right);
     }
     private void Update(){
