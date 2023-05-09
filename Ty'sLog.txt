@@ -33,7 +33,7 @@ what I had in my unity to look the same on OpenGL. (~4 hours)
 
 
 Run Instructions:
--To run what I have published with openGL you can go to the link: https://play.unity.com/mg/other/302-final_proj
+-To run what I have published with openGL and simmer: https://simmer.io/@tander/frog-guy
 -It works best when run in unity developer environment. You can open the 'Frogger' folder in unity and run the game there
 -Use the arrow Keys to play
 -You get 3 lives and you want to make it to all 5 home
@@ -45,4 +45,4 @@ After several attempts we realized that this was no reasonable, and that we shou
 with having the game playable online. I used a leaderboard webserver package meant for unity games, but I ran into all sorts of errors.
 3. Aspect ratios and Resolution. I built my game with custom aspect ration and resolution. I didn't realize that these don't translate 
 over when publishing with OpenGL. I figured out how to set the same resolution; However, there is no way to customize OpenGL aspect
-ratio. This makes the proportions of my online game not work (the log and turtle paths got stretched out).
+ratio. This makes the proportions of my online game not work (the log and turtle paths got stretched out). I got it working at the last second with simmer.
