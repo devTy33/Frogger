@@ -2,6 +2,9 @@ Justin Palumbo
 Justin Palumbo final project 2/13/23
 User Manual: to play the game copy and paste the URL and game will load and you can play the game from there. No special libaries are needed
 all you need to do is load up game and play.
+The code was compiled automatically by unity and created the web gl build which you will be player, scr code is in individual  all folders
+for justin kong it is in justin king folder in assets the scripts.
+
 https://github.com/jpalumbo64/unity_final_project
 To see code and files you can go to each game indivual folder go to assets and scripts which were written in C#
 we used pre made sprites each and those can be found in game folders as well. 
